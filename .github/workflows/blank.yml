@@ -1,0 +1,11 @@
+name: Call CICD Pipeline from Another Repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-cicd:
+    uses: SanjayR1888/Febbatch09_devops/.github/workflows/cicd.yml@main
+    with:
+      environment: dev
+    secrets: inherit
